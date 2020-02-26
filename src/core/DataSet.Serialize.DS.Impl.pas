@@ -263,23 +263,35 @@ function TDataSetSerialize.SaveStructure: TJSONArray;
 var
   LField: TField;
   LJSONObject: TJSONObject;
+
+  function getJSONBool(aCond:Boolean):TJSONValue;
+  begin
+    if aCond then
+      Result := TJSONTrue.Create
+    else
+      Result := TJSONFalse.Create;
+  end;
+
 begin
   Result := TJSONArray.Create;
   if FDataSet.FieldCount <= 0 then
     Exit;
   for LField in FDataSet.Fields do
   begin
+//    TJSONTrue(
     LJSONObject := TJSONObject.Create;
     LJSONObject.AddPair('Alignment', TJSONString.Create(GetEnumName(TypeInfo(TAlignment), Ord(LField.Alignment))));
     LJSONObject.AddPair('FieldName', TJSONString.Create(LField.FieldName));
     LJSONObject.AddPair('DisplayLabel', TJSONString.Create(LField.DisplayLabel));
     LJSONObject.AddPair('DataType', TJSONString.Create(GetEnumName(TypeInfo(TFieldType), Integer(LField.DataType))));
     LJSONObject.AddPair('Size', TJSONNumber.Create(LField.SIZE));
-    LJSONObject.AddPair('Key', TJSONBool.Create(pfInKey in LField.ProviderFlags));
+
+    LJSONObject.AddPair('Key', getJSONBool(pfInKey in LField.ProviderFlags));
+
     LJSONObject.AddPair('Origin', TJSONString.Create(LField.ORIGIN));
-    LJSONObject.AddPair('Required', TJSONBool.Create(LField.Required));
-    LJSONObject.AddPair('Visible', TJSONBool.Create(LField.Visible));
-    LJSONObject.AddPair('ReadOnly', TJSONBool.Create(LField.ReadOnly));
+    LJSONObject.AddPair('Required', getJSONBool(LField.Required));
+    LJSONObject.AddPair('Visible', getJSONBool(LField.Visible));
+    LJSONObject.AddPair('ReadOnly', getJSONBool(LField.ReadOnly));
     LJSONObject.AddPair('AutoGenerateValue', TJSONString.Create(GetEnumName(TypeInfo(TAutoRefreshFlag), Integer(LField.AutoGenerateValue))));
     Result.AddElement(LJSONObject);
   end;

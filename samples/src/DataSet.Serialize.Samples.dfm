@@ -826,9 +826,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 912
     Top = 496
     object mtDataSetID: TIntegerField
@@ -860,9 +859,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 816
     Top = 496
   end
@@ -876,9 +874,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 600
     Top = 496
     object mtJSONNestedPAIS: TStringField
@@ -900,9 +897,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 600
     Top = 440
     object mtJSONNestedUFNOME: TStringField
@@ -934,9 +930,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 600
     Top = 384
     object mtJSONNestedCityNOME: TStringField
@@ -963,9 +958,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 600
     Top = 320
     object mtChieldsArrayVALUE: TIntegerField
@@ -977,9 +971,8 @@ object FrmSamples: TFrmSamples
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
     Left = 600
     Top = 264
     object mtNestedID: TIntegerField
